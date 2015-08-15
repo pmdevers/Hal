@@ -14,7 +14,7 @@ using Panther.Hal.Converters;
 
 namespace Panther.Hal.Formatters
 {
-    public class HalJsonOutputFormatter : OutputFormatter, IJsonOutputFormatter
+    public class HalJsonOutputFormatter : OutputFormatter
     {
         public const string HalMediaType = "application/hal+json";
 
