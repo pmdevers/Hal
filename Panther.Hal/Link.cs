@@ -100,6 +100,41 @@ namespace Panther.Hal
             return new Link(rel, href);
         }
 
+        public Link CreateLink(string newRel, params object[] parameters)
+        {
+            var clone = (Link)MemberwiseClone();
+
+            clone.Rel = newRel;
+            clone.Href = CreateUri(parameters).ToString();
+
+            return clone;
+        }
+
+        public Uri CreateUri(params object[] parameters)
+        {
+            var href = Href;
+            href = SubstituteParams(href, parameters);
+
+            return new Uri(href, UriKind.RelativeOrAbsolute);
+        }
+
+        public static string SubstituteParams(string href, params object[] parameters)
+        {
+            var uriTemplate = new UriTemplate(href);
+            foreach (var parameter in parameters)
+            {
+                foreach (var substitution in parameter.GetType().GetProperties())
+                {
+                    var name = substitution.Name;
+                    var value = substitution.GetValue(parameter, null);
+                    var substituionValue = value == null ? null : value.ToString();
+                    uriTemplate.SetParameter(name, substituionValue);
+                }
+            }
+
+            return uriTemplate.Resolve();
+        }
+
         /// <summary>
         /// Returns an empty string if not curie prefix is set.
         /// </summary>

@@ -1,7 +1,8 @@
 ﻿{
+  "projects": ["Panther.Hal", "Panther.Hal.Web"],
   "sdk": {
-    "version": "1.0.0-beta6",
-    "runtime": "clr",
+    "version": "1.0.0-beta7",
+    "runtime": "coreclr",
     "architecture": "x86"
   }
 }

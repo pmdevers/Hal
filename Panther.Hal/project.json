@@ -1,19 +1,21 @@
 ﻿{
-    "version": "1.0.0-Beta6",
-    "description": "Hypertext Application Language",
-    "authors": [ "Patrick Evers" ],
-    "tags": [ "HAL", "hal+json" ],
-    "projectUrl": "",
-    "licenseUrl": "",
+  "version": "1.0.1-Beta7",
+  "title": "Panther Hal+Json MediaFormatter",
+  "description": "Hypertext Application Language",
+  "authors": [ "Patrick Evers" ],
+  "tags": [ "HAL", "hal+json", "MVC6" ],
+  "iconUrl": "http://www.panthercms.nl/media/icons/android-icon-48x48.png",
+  "projectUrl": "https://github.com/pmdevers/Hal/tree/develop",
+  "licenseUrl": "",
 
-    "dependencies": {
-        "Microsoft.AspNet.Mvc": "6.0.0-beta6",
-        "Microsoft.AspNet.Mvc.Core": "6.0.0-beta6"
-    },
+  "dependencies": {
+    "Microsoft.AspNet.Mvc": "6.0.0-beta7",
+    "Microsoft.AspNet.Mvc.Core": "6.0.0-beta7"
+  },
 
-  "frameworks" : {
+  "frameworks": {
     "dnx451": { },
-    "dnxcore50" : {
+    "dnxcore50": {
       "dependencies": {
       }
     }

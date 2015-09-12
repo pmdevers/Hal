@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Panther.Hal.Web.Model
+﻿namespace Panther.Hal.Web.Model
 {
     public class PostModel
     {

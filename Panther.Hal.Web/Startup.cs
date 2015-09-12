@@ -23,12 +23,10 @@ namespace Panther.Hal.Web
         // Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().Configure<MvcOptions>(options =>
+            services.AddMvc(options =>
             {
                 //options.OutputFormatters.Clear();
-
                 var halJsonFormatter = new HalJsonOutputFormatter();
-
                 options.OutputFormatters.Insert(0, halJsonFormatter);
             });
             // Uncomment the following line to add Web API services which makes it easier to port Web API 2 controllers.
